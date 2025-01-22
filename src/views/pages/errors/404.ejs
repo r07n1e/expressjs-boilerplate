@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://unpkg.com/htmx.org@2.0.3"
+      integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+    <div class="bg-red-50 min-h-screen flex items-center justify-center">
+      <main class="container mx-auto px-4 text-center pt-12 md:pt-20">
+        <h1
+          class="text-6xl lg:text-8xl font-bold text-red-600 mb-6"
+          aria-label="404 - Page not found"
+        >
+          4<span class="inline-block">0</span>4
+        </h1>
+        <p class="text-xl lg:text-2xl text-orange-800 mb-8">
+          Oops! This is not the web page you're looking for.
+        </p>
+        <a
+          href="/"
+          class="inline-block py-3 px-6 bg-red-500 text-white font-semibold rounded-full hover:bg-orange-600 transition duration-300 mb-12 focus:outline-none focus:ring-2 focus:ring-orange-300"
+          aria-label="Go back to home page"
+        >
+          Take Me Home.
+        </a>
+        <div
+          class="grid grid-cols-3 gap-4 max-w-2xl mx-auto"
+          aria-hidden="true"
+        >
+          <!-- Grid of animated squares -->
+        </div>
+      </main>
+    </div>
+
+    <script>
+      // Create grid of squares
+      const grid = document.querySelector(".grid");
+      for (let i = 0; i < 3; i++) {
+        const square = document.createElement("div");
+        square.className = "bg-red-200 rounded-lg aspect-square";
+        grid.appendChild(square);
+      }
+
+      // Animate squares
+      gsap.from(".grid div", {
+        scale: 0,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.02,
+        ease: "back.out(1.7)",
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 1,
+      });
+
+      // Animate 404 text
+      gsap.to("h1 span", {
+        rotationY: 360,
+        duration: 2,
+        ease: "elastic.out(1, 0.3)",
+        repeat: -1,
+        repeatDelay: 3,
+      });
+    </script>
+  </body>
+</html>
