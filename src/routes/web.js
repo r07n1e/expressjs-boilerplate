@@ -14,16 +14,23 @@ function loadViewRoutes(dirPath, basePath = "") {
       // Recursive call for subdirectories
       loadViewRoutes(filePath, routePath);
     } else if (file.endsWith(".ejs")) {
-      // Register route to render the view
+      // Skip error pages (handled separately)
       if (routePath.includes("errors")) return;
+
+      // Register route to render the view
       router.get(routePath, (req, res) => {
-        const relativePath = path.relative(
-          path.join(__dirname, "views"),
-          filePath
-        );
-        res.render(relativePath.replace(/\\/g, "/").replace(".ejs", "")); // Render EJS view
+        try {
+          const relativePath = path.relative(
+            path.join(__dirname, "views"),
+            filePath
+          );
+          const viewPath = relativePath.replace(/\\/g, "/").replace(".ejs", "");
+          res.render(viewPath); // Render EJS view
+        } catch (error) {
+          console.error(`Error rendering view ${filePath}:`, error.message);
+          res.status(500).render("errors/500"); // Render a generic error page
+        }
       });
-      console.log(`Route: ${routePath}`);
     }
   });
 }
