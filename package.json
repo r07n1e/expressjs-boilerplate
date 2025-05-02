@@ -1,7 +1,10 @@
 {
-  "name": "lmd-system",
+  "name": "express-boilerplate",
   "version": "1.0.0",
-  "description": "A system to streamline processes for Learning Management Division",
+  "bin": {
+    "nom": "./nom.js"
+  },
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./src/server.js"
