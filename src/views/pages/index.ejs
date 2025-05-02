@@ -13,150 +13,296 @@
     ></script>
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body class="flex flex-col h-screen justify-between">
-    <div
-      class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5"
-    >
-    <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Services</h2>
-      <p class="mb-12 text-lg text-gray-500"></p>
-      <div class="w-full">
-        <div class="flex flex-col w-full mb-10 sm:flex-row">
-          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-            <div class="relative h-full ml-0 mr-0 sm:mr-10">
+  <body
+    class="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white min-h-screen flex flex-col"
+  >
+    <!-- Header -->
+    <header class="container mx-auto px-4 py-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <div
+            class="h-10 w-10 rounded-full bg-white text-indigo-600 flex items-center justify-center text-xl font-bold"
+          ></div>
+          <span class="ml-3 text-xl font-bold">MEKT</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#"
+            class="hover:text-indigo-300 transition-colors duration-200"
+            >About</a
+          >
+          <a
+            href="#"
+            class="hover:text-indigo-300 transition-colors duration-200"
+            >Features</a
+          >
+          <a
+            href="#"
+            class="hover:text-indigo-300 transition-colors duration-200"
+            >Contact</a
+          >
+        </nav>
+        <div class="md:hidden">
+          <button class="text-white focus:outline-none">
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          class="absolute top-20 left-10 w-20 h-20 rounded-full bg-indigo-500 opacity-20 floating"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-32 h-32 rounded-full bg-purple-500 opacity-20 floating-slow"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/4 w-24 h-24 rounded-full bg-pink-500 opacity-20 floating-slower"
+        ></div>
+        <div
+          class="absolute top-1/3 right-1/3 w-16 h-16 rounded-full bg-indigo-300 opacity-20 floating"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 py-12 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-center md:text-left">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            >
+              Something
               <span
-                class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-cyan-500 rounded-lg"
-              ></span>
-              <a href="">    
-                <div
-                class="relative h-full p-5 bg-white border-2 border-cyan-500 rounded-lg"
+                class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                >Amazing</span
               >
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">
-                    Timeslot
-                  </h3>
-                </div>
-                <p
-                  class="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase"
+              is Coming Soon
+            </h1>
+            <p
+              class="text-lg md:text-xl text-indigo-200 mb-8 max-w-lg mx-auto md:mx-0"
+            >
+              We're working hard to bring you our new platform. Sign up to be
+              the first to know when we launch and get exclusive early access.
+            </p>
+
+            <!-- Countdown Timer -->
+            <!-- <div class="grid grid-cols-4 gap-4 max-w-md mx-auto md:mx-0 mb-10">
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div class="text-3xl md:text-4xl font-bold">15</div>
+                <div class="text-indigo-300 text-sm">Days</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div class="text-3xl md:text-4xl font-bold">08</div>
+                <div class="text-indigo-300 text-sm">Hours</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div class="text-3xl md:text-4xl font-bold">23</div>
+                <div class="text-indigo-300 text-sm">Minutes</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div class="text-3xl md:text-4xl font-bold">42</div>
+                <div class="text-indigo-300 text-sm">Seconds</div>
+              </div>
+            </div> -->
+
+            <!-- Newsletter Signup -->
+            <div class="max-w-md mx-auto md:mx-0">
+              <form class="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white/10 backdrop-blur-sm border border-white/20"
+                />
+                <button
+                  type="submit"
+                  class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 rounded-lg font-medium transition-all duration-200 whitespace-nowrap"
                 >
-                  ------------
-                </p>
-                <p class="mb-2 text-gray-600">
-                  A decentralized application (dapp) is an application built on
-                  a decentralized network that combines a smart contract and a
-                  frontend user interface.
-                </p>
-              </div></a>
+                  Notify Me
+                </button>
+              </form>
+              <p class="text-xs text-indigo-300 mt-3">
+                We respect your privacy. No spam, ever. Unsubscribe anytime.
+              </p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="mt-10 flex justify-center md:justify-start space-x-6">
+              <a
+                href="#"
+                class="text-indigo-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-indigo-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-indigo-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-indigo-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
             </div>
           </div>
-          <div class="w-full sm:w-1/2">
-            <div class="relative h-full ml-0 md:mr-10">
-              <span
-                class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-cyan-500 rounded-lg"
-              ></span>
-              <a href="/lessonsummary">
-                <div
-                class="relative h-full p-5 bg-white border-2 border-cyan-500 rounded-lg"
+
+          <!-- Illustration -->
+          <div class="hidden md:block">
+            <div class="relative">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full opacity-20 blur-3xl"
+              ></div>
+              <svg
+                width="800px"
+                height="400px"
+                viewBox="0 0 1024 1024"
+                class="icon"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">
-                    Lesson Summary
-                  </h3>
-                </div>
-                <p
-                  class="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase"
-                >
-                  ------------
-                </p>
-                <p class="mb-2 text-gray-600">
-                  Web 3.0 is the third generation of Internet services that will
-                  focus on understanding and analyzing data to provide a
-                  semantic web.
-                </p>
-              </div></a>
+                <path
+                  d="M894.4 812.1h-788.2c-17.1 0-30.9-14.3-30.9-32v-208H772c76 0 139.6 59.8 146.9 138.1l6.5 69.9c-0.1 17.6-13.9 32-31 32zM695.3 572h-620l52.9-163.8c4.3-13.2 16.6-22.2 30.5-22.2h444.5c13.3 0 25.3 8.3 29.9 20.7l62.2 165.3z"
+                  fill="#F2E779"
+                />
+                <path
+                  d="M953.3 812.1l-7.2-57.7c-4-32.1-31.3-56.3-63.5-56.3H767.2c-26.5 0-50.6 16.8-59.9 41.7l-27 72.3h273z"
+                  fill="#F9EBCD"
+                />
+                <path
+                  d="M920.3 812.1h-206l22.2-59.2c4.7-12.5 16.6-20.8 30-20.8h115.6c16.1 0 29.8 12 31.8 28l6.4 52z"
+                  fill="#F4CD9D"
+                />
+                <path
+                  d="M920.3 820.1h-206c-2.6 0-5.1-1.3-6.6-3.4-1.5-2.2-1.8-4.9-0.9-7.4L729 750c5.8-15.5 20.9-26 37.5-26h115.6c20.1 0 37.2 15.1 39.7 35l6.5 52c0.3 2.3-0.4 4.6-1.9 6.3-1.6 1.8-3.8 2.8-6.1 2.8z m-194.5-16h185.4l-5.4-43c-1.5-12-11.7-21-23.8-21H766.5c-9.9 0-19 6.3-22.5 15.6l-18.2 48.4z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M817.3 841.1m-80 0a80 80 0 1 0 160 0 80 80 0 1 0-160 0Z"
+                  fill="#DAE5FF"
+                />
+                <path
+                  d="M124.3 812.1l7.2-57.7c4-32.1 31.3-56.3 63.5-56.3h115.5c26.5 0 50.6 16.8 59.9 41.7l27 72.3h-273.1z"
+                  fill="#F9EBCD"
+                />
+                <path
+                  d="M157.3 812.1h206l-22.2-59.2c-4.7-12.5-16.6-20.8-30-20.8h-115.5c-16.1 0-29.8 12-31.8 28l-6.5 52z"
+                  fill="#F4CD9D"
+                />
+                <path
+                  d="M363.3 820.1h-206c-2.3 0-4.5-1-6-2.7-1.5-1.7-2.2-4-1.9-6.3l6.5-52c2.5-20 19.6-35 39.7-35h115.6c16.6 0 31.6 10.4 37.5 26l22.2 59.2c0.9 2.5 0.6 5.2-0.9 7.4-1.6 2.1-4.1 3.4-6.7 3.4z m-196.9-16h185.4l-18.2-48.4c-3.5-9.3-12.5-15.6-22.5-15.6h-115.5c-12.1 0-22.3 9-23.8 21l-5.4 43z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M260.3 841.1m-80 0a80 80 0 1 0 160 0 80 80 0 1 0-160 0Z"
+                  fill="#DAE5FF"
+                />
+                <path
+                  d="M796.2 641.1h-649.9c-4.4 0-8-3.6-8-8s3.6-8 8-8h649.8c4.4 0 8 3.6 8 8s-3.5 8-7.9 8z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M874.8 617.1h-22.5c-8.8 0-16 7.2-16 16s7.2 16 16 16h46.9c-6.7-11.8-14.9-22.5-24.4-32z"
+                  fill="#FFF5DC"
+                />
+                <path
+                  d="M364.3 536.1h-210c-11 0-18.7-10.8-15.2-21.1l25.5-75.1c4.4-13 16.6-21.7 30.3-21.7h169.3c8.8 0 16 7.2 16 16v86c0.1 8.7-7.1 15.9-15.9 15.9z"
+                  fill="#DAE5FF"
+                />
+                <path
+                  d="M364.3 544.1h-210c-7.7 0-15-3.7-19.5-10-4.6-6.4-5.7-14.3-3.2-21.7l25.5-75.1c5.5-16.2 20.8-27.2 37.9-27.2h169.3c13.2 0 24 10.8 24 24v86c0 13.2-10.8 24-24 24z m-169.3-118c-10.3 0-19.5 6.5-22.8 16.3l-25.5 75.1c-0.8 2.5-0.4 5.1 1.1 7.2 1.5 2.1 3.9 3.3 6.5 3.3h209.9c4.4 0 8-3.6 8-8v-86c0-4.4-3.6-8-8-8l-169.2 0.1z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M610.3 536.1h-159c-8.9 0-16-7.2-16-16v-86c0-8.8 7.2-16 16-16h118.2c13.7 0 25.9 8.7 30.4 21.7l25.5 75.1c3.6 10.4-4.2 21.2-15.1 21.2z"
+                  fill="#DAE5FF"
+                />
+                <path
+                  d="M610.3 544.1h-159c-13.2 0-24-10.8-24-24v-86c0-13.2 10.8-24 24-24h118.2c17.2 0 32.4 10.9 37.9 27.2l25.5 75.1c2.5 7.4 1.3 15.3-3.2 21.7-4.4 6.2-11.7 10-19.4 10z m-159-118c-4.4 0-8 3.6-8 8v86c0 4.4 3.6 8 8 8h158.9c2.6 0 5-1.2 6.5-3.4 1.5-2.1 1.9-4.7 1.1-7.2l-25.5-75.1c-3.3-9.7-12.5-16.3-22.8-16.3H451.3z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M261.3 842.1m-50 0a50 50 0 1 0 100 0 50 50 0 1 0-100 0Z"
+                  fill="#FFFFFF"
+                />
+                <path
+                  d="M261.3 900.1c-32 0-58-26-58-58s26-58 58-58 58 26 58 58-26 58-58 58z m0-100c-23.2 0-42 18.8-42 42s18.8 42 42 42 42-18.8 42-42-18.8-42-42-42z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M817.3 842.1m-50 0a50 50 0 1 0 100 0 50 50 0 1 0-100 0Z"
+                  fill="#FFFFFF"
+                />
+                <path
+                  d="M817.3 900.1c-32 0-58-26-58-58s26-58 58-58 58 26 58 58-26 58-58 58z m0-100c-23.2 0-42 18.8-42 42s18.8 42 42 42 42-18.8 42-42-18.8-42-42-42zM76.3 212.9c5 0 7.5 3 12.7 10.2 5.1 7.2 12 17 25.7 17s20.7-9.8 25.7-17c5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 13.8 0 20.7-9.8 25.7-17 5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 4.4 0 8-3.6 8-8s-3.6-8-8-8c-5 0-7.5-3-12.7-10.2-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17-4.4 0-8 3.6-8 8s3.6 8 8 8zM76.3 262.9c5 0 7.5 3 12.7 10.2 5.1 7.2 12 17 25.7 17s20.7-9.8 25.7-17c5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 13.8 0 20.7-9.8 25.7-17 5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 4.4 0 8-3.6 8-8s-3.6-8-8-8c-5 0-7.5-3-12.7-10.2-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17-4.4 0-8 3.6-8 8 0 4.5 3.6 8 8 8zM758.3 468.4c5 0 7.5 3 12.7 10.2 5.1 7.2 12 17 25.7 17s20.7-9.8 25.7-17c5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 13.8 0 20.7-9.8 25.7-17 5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 4.4 0 8-3.6 8-8s-3.6-8-8-8c-5 0-7.5-3-12.7-10.2-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17-4.4 0-8 3.6-8 8s3.6 8 8 8zM758.3 518.4c5 0 7.5 3 12.7 10.2 5.1 7.2 12 17 25.7 17s20.7-9.8 25.7-17c5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 13.8 0 20.7-9.8 25.7-17 5.1-7.3 7.7-10.2 12.7-10.2s7.5 3 12.7 10.2c5.1 7.2 12 17 25.7 17 4.4 0 8-3.6 8-8s-3.6-8-8-8c-5 0-7.5-3-12.7-10.2-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17s-20.7 9.8-25.7 17c-5.1 7.3-7.7 10.2-12.7 10.2s-7.5-3-12.7-10.2c-5.1-7.2-12-17-25.7-17-4.4 0-8 3.6-8 8s3.6 8 8 8z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M349.1 104.1m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"
+                  fill="#FFEB4D"
+                />
+                <path
+                  d="M349.1 144.1c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-18 40-40 40z m0-64c-13.2 0-24 10.8-24 24s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M961.2 811.1l-7.2-57.7c-2.5-19.9-12.9-37-27.8-48.4-4.6-38.1-22.1-73.1-49.7-99-28.7-27-65.9-41.9-104.7-41.9h-71.1L640.4 404c-5.8-15.5-20.9-25.9-37.4-25.9h-444.4c-17.4 0-32.7 11.1-38.1 27.7l-52.8 163.8c-0.2 0.5-0.2 0.9-0.3 1.4v209c0 22.1 17.5 40 38.9 40h68.6c-1.7 6.7-2.5 13.8-2.5 21 0 30.4 15.5 57.2 38.9 73h-108c-4.4 0-8 3.6-8 8s3.6 8 8 8h824c4.4 0 8-3.6 8-8s-3.6-8-8-8h-60.9c23.5-15.8 38.9-42.6 38.9-73 0-7.2-0.9-14.3-2.5-21h50.5c2.3 0 4.5-1 6-2.7s2.2-3.9 1.9-6.2z m-76.6-170h-32.3c-4.4 0-8-3.6-8-8s3.6-8 8-8h19.1c4.8 5 9.2 10.3 13.2 16z m-748.8-230.5c3.2-9.9 12.4-16.6 22.8-16.6h444.5c9.9 0 19 6.2 22.5 15.5l58.1 154.5h-597.4l49.5-153.4z m-12.2 342.8l-6.3 50.7h-11c-12.6 0-22.9-10.8-22.9-24v-200H772c30.4 0 59.7 10.2 83.8 29h-3.4c-13.2 0-24 10.8-24 24s10.8 24 24 24h43c6.1 11.9 10.5 24.6 13.2 37.8-8-3.1-16.8-4.8-25.8-4.8H767.2c-29.8 0-56.9 18.9-67.4 46.9l-25 67.1H402.9l-25-67.1c-10.5-28.1-37.6-46.9-67.4-46.9H195c-36.3 0-67 27.2-71.4 63.3z m9.8 50.7l6.1-48.7c3.5-28.1 27.4-49.3 55.5-49.3h115.5c23.2 0 44.2 14.7 52.4 36.5l22.9 61.5h-45.6c-14-30.1-44.5-51-79.8-51s-65.8 20.9-79.8 51h-47.2z m54.9 37c0-39.7 32.3-72 72-72s72 32.3 72 72-32.3 72-72 72-72-32.3-72-72z m121.1 73c23.5-15.8 38.9-42.6 38.9-73 0-7.2-0.9-14.3-2.5-21h386c-1.7 6.7-2.5 13.8-2.5 21 0 30.4 15.5 57.2 38.9 73H309.4z m507.9-1c-39.7 0-72-32.3-72-72s32.3-72 72-72 72 32.3 72 72-32.3 72-72 72z m79.8-109c-14-30.1-44.5-51-79.8-51s-65.8 20.9-79.8 51h-45.6l22.9-61.5c8.1-21.8 29.2-36.5 52.4-36.5h115.5c10.3 0 20.7 2 28.5 7.9 4.8 3.6 12.7 8.9 17.6 16.5 4.7 7.4 8.3 15.7 9.5 24.9l6.1 48.7h-47.3z"
+                  fill="#9A2D2F"
+                />
+                <path
+                  d="M601.4 425.8c9.6 0.5 19.9 0.9 30.7 1.2l-6.5-17.4c-3.5-9.3-12.5-15.5-22.5-15.5h-444.5c-6.1 0-11.8 2.3-16.1 6.2 3.8 8 11.9 15.5 23.9 21.9 7.4-7.5 17.6-12 28.6-12h169.3c8.3 0 15.6 4.2 19.9 10.6 20-5.8 35.5-11.2 51.1-13.6 13.6-2 27.8-0.2 46.2 3h88a39.7 39.7 0 0 1 31.9 15.6zM272.8 439.1c39.2-2 68.2-7.2 91.4-13H195c-4.2 0-8.3 1.1-11.8 3.1 22.2 7.5 52.5 11.7 89.6 9.9z"
+                  fill="#FFFFFF"
+                />
+              </svg>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <footer>
-      <div class="mt-8 bg-cyan-600 pt-9">
-        <div class="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
-          <div class="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
-            <div class="md:w-[316px]">
-              <p class="text-[18px] font-medium text-white">
-              <h1 class="text-white font-extrabold">
-                Lecturing Management Division <br>of <span class="text-amber-600">Institute for Banking Studies</span>
-              </h1>
-              </p>
-              <p class="mt-[18px] text-[15px] font-normal text-white/[80%]"></p>
-              <div class="mt-[18px] flex gap-4">
-                <a class="hover:scale-110" target="_blank"
-                  href="#"><img alt="facebook icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" style="color:transparent" src="https://www.englishyaari.com/img/facebook.svg" /></a><a
-                  class="hover:scale-110" target="_blank"
-                  href="/"><img alt="linkdin icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" style="color:transparent" src="https://www.englishyaari.com/img/linkdin.svg" /></a><a
-                  class="hover:scale-110" target="_blank"
-                  href="/"><img alt="instagram icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" style="color:transparent" src="https://www.englishyaari.com/img/instagram1.svg" /></a><a
-                  class="hover:scale-110" target="_blank"
-                  href=""><img alt="twitter icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" style="color:transparent" src="https://www.englishyaari.com/img/twitter.svg" /></a><a
-                  class="hover:scale-110" target="_blank"
-                  href="https://www.youtube.com/"><img alt="youtube icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" style="color:transparent" src="https://www.englishyaari.com/img/youtube.svg" /></a>
-              </div>
-            </div>
-            <div class="mt-6 flex w-full flex-col justify-between text-white sm:flex-row md:mt-0 md:max-w-[341px]">
-              <div class="">
-                <ul>
-                  <li class="mt-[15px]">
-                    <div class="mt-[23px] flex">
-                      <div class="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M20.8472 14.8554L16.4306 12.8764L16.4184 12.8707C16.1892 12.7727 15.939 12.7333 15.6907 12.7562C15.4424 12.7792 15.2037 12.8636 14.9963 13.002C14.9718 13.0181 14.9484 13.0357 14.9259 13.0545L12.6441 14.9998C11.1984 14.2976 9.70595 12.8164 9.00376 11.3895L10.9519 9.07294C10.9706 9.0495 10.9884 9.02606 11.0053 9.00075C11.1407 8.79384 11.2229 8.55667 11.2445 8.31035C11.2661 8.06402 11.2264 7.81618 11.1291 7.58887V7.57762L9.14438 3.15356C9.0157 2.85662 8.79444 2.60926 8.51362 2.44841C8.2328 2.28756 7.9075 2.22184 7.58626 2.26106C6.31592 2.42822 5.14986 3.05209 4.30588 4.01615C3.4619 4.98021 2.99771 6.21852 3.00001 7.49981C3.00001 14.9436 9.05626 20.9998 16.5 20.9998C17.7813 21.0021 19.0196 20.5379 19.9837 19.6939C20.9477 18.85 21.5716 17.6839 21.7388 16.4136C21.7781 16.0924 21.7125 15.7672 21.5518 15.4864C21.3911 15.2056 21.144 14.9843 20.8472 14.8554ZM16.5 19.4998C13.3185 19.4963 10.2682 18.2309 8.01856 15.9813C5.76888 13.7316 4.50348 10.6813 4.50001 7.49981C4.49648 6.58433 4.82631 5.69887 5.42789 5.00879C6.02947 4.3187 6.86167 3.87118 7.76907 3.74981C7.7687 3.75355 7.7687 3.75732 7.76907 3.76106L9.73782 8.16731L7.80001 10.4867C7.78034 10.5093 7.76247 10.5335 7.74657 10.5589C7.60549 10.7754 7.52273 11.0246 7.5063 11.2825C7.48988 11.5404 7.54035 11.7981 7.65282 12.0307C8.5022 13.7679 10.2525 15.5051 12.0084 16.3536C12.2428 16.465 12.502 16.5137 12.7608 16.495C13.0196 16.4762 13.2692 16.3907 13.485 16.2467C13.5091 16.2305 13.5322 16.2129 13.5544 16.1942L15.8334 14.2498L20.2397 16.2232C20.2397 16.2232 20.2472 16.2232 20.25 16.2232C20.1301 17.1319 19.6833 17.9658 18.9931 18.5689C18.3028 19.172 17.4166 19.5029 16.5 19.4998Z"
-                            fill="white"></path>
-                        </svg>
-                      </div>
-                      <div class="ml-[18px]">
-                        <a href="tel:+911800123444" class="font-Inter text-[14px] font-medium text-white">+855 23 990 188</a>
-                        <p class="font-Inter text-[12px] font-medium text-white">Contact Number</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mt-[15px]">
-                    <div class="mt-[23px] flex">
-                    <div class="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
-                      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M19 0H1C0.801088 0 0.610322 0.0790178 0.46967 0.21967C0.329018 0.360322 0.25 0.551088 0.25 0.75V13.5C0.25 13.8978 0.408035 14.2794 0.68934 14.5607C0.970644 14.842 1.35218 15 1.75 15H18.25C18.6478 15 19.0294 14.842 19.3107 14.5607C19.592 14.2794 19.75 13.8978 19.75 13.5V0.75C19.75 0.551088 19.671 0.360322 19.5303 0.21967C19.3897 0.0790178 19.1989 0 19 0ZM10 7.98281L2.92844 1.5H17.0716L10 7.98281ZM7.25406 7.5L1.75 12.5447V2.45531L7.25406 7.5ZM8.36406 8.51719L9.48906 9.55312C9.62743 9.68014 9.80842 9.75062 9.99625 9.75062C10.1841 9.75062 10.3651 9.68014 10.5034 9.55312L11.6284 8.51719L17.0659 13.5H2.92844L8.36406 8.51719ZM12.7459 7.5L18.25 2.45438V12.5456L12.7459 7.5Z"
-                          fill="white"></path>
-                      </svg>
-                    </div>
-                    <div class="ml-[18px]">
-                      <a href="mailto:help@lorem.com" class="font-Inter text-[14px] font-medium text-[#fff]">lmd@ibs.edu.kh</a>
-                      <p class="font-Inter text-[12px] font-medium text-[#fff]">Email</p>
-                    </div>
-                  </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-6 flex flex-col gap-4 sm:mt-0">
-                <p class="text-deutziawhite font-inter text-[18px] font-medium"></p>
-                <div class="flex gap-4 sm:flex-col">
-                  <a target="_blank"
-                    href="#"><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1" style="color:transparent" src="https://www.englishyaari.com/img/google-store.svg" /></a><a
-                    target="_blank"
-                    href="#"><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1" style="color:transparent" src="https://www.englishyaari.com/img/apple-store.svg" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="mt-[30px] text-white" />
-          <div class="flex items-center justify-center pb-8 pt-[9px] md:py-8">
-            <p class="text-[10px] font-normal text-white md:text-[12px]">
-              Institute for Banking Studies © 2025
-            </p>
-          </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-4 py-6 border-t border-white/10">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-sm text-indigo-300">
+          &copy; 2025 MEKT. All rights reserved.
+        </div>
+        <div class="mt-4 md:mt-0">
+          <nav class="flex space-x-6 text-sm text-indigo-300">
+            <a href="#" class="hover:text-white transition-colors duration-200"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-white transition-colors duration-200"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-white transition-colors duration-200"
+              >Contact Us</a
+            >
+          </nav>
         </div>
       </div>
     </footer>
-    <!-- source:https://tailwind.besoeasy.com -->
   </body>
 </html>
